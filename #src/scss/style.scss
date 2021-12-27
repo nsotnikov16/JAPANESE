@@ -1,0 +1,66 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url(../fonts/#{$file_name}.woff2) format("woff2");
+    src: url(../fonts/#{$file_name}.woff) format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+$red: #e52929;
+$background-section: #f0f4f7;
+$black: #071c1f;
+$gray: #929DA3;
+
+@import "fonts";
+
+@import "normalize";
+
+body {
+  font-family: "Brutal Type";
+}
+.page {
+  color: $black;
+  overflow: hidden;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1160px;
+    @media (max-width: 1024px) {
+      padding: 0 99px;
+    }
+
+    @media (max-width: 560px) {
+      padding: 0 15px;
+    }
+  }
+}
+
+/* Повторяющиеся элементы */
+@import "other";
+
+/* Лого */
+@import "logo";
+
+/* Шапка */
+@import "header";
+
+/* Верхнее меню */
+@import "menu";
+
+/* Баннеры */
+@import "banner";
+
+/* Яндекс Карты */
+@import "maps";
+
+/* Подвал */
+@import "footer";
+
+/* Попапы */
+@import "popups";
+
+/* Формы */
+@import "form";

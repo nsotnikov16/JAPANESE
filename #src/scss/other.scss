@@ -1,0 +1,47 @@
+.visually-hidden {
+    display: none;
+}
+
+.btn {
+    background: $red;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.section {
+    padding: 115px 0;
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $red;
+        padding-bottom: 20px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 55px;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+.social {
+    display: flex;
+    
+    align-items: center;
+}

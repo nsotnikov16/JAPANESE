@@ -1,0 +1,26 @@
+.menu {
+    display: flex;
+    
+    &__burger {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 24px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__item-link {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 700;
+    }
+}
