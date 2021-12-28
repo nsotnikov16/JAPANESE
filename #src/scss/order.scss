@@ -7,7 +7,18 @@
 
     &__card {
         padding: 35px;
-        border: 1px solid #E4EBF1;
+        border: 1px solid #e4ebf1;
+        &:hover {
+            background-image: url(../img/order/hover.png);
+            .order__card-title,
+            .order__card-description {
+                color: white;
+            }
+
+            .order__card-img {
+                filter: brightness(0) invert(1);
+            }
+        }
     }
 
     &__card-img {

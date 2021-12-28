@@ -9,6 +9,10 @@
                 display: block;
             }
         }
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     .form-label {
@@ -16,6 +20,7 @@
         font-size: 14px;
         line-height: 17px;
         max-width: 160px;
+        color: #929da3;
         span {
             color: $red;
         }
@@ -23,5 +28,48 @@
     .form-input {
         display: none;
         max-width: 160px;
+    }
+
+    .form-title {
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+    }
+    .form-subtitle {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 33px;
+    }
+    .btn:not(.banner .btn) {
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    textarea {
+        outline: none;
+        border: 0;
+        resize: none;
+    }
+}
+
+.form:not(.banner__form) {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    .form-input {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .form-row {
+        border: 2px solid #e4ebf1;
+        border-radius: 3px;
+        padding: 15px;
+        &.message {
+            min-height: 80px;
+        }
+        
     }
 }

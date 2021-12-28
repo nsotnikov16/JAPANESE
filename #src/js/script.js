@@ -47,15 +47,19 @@ class Form {
     }
 
     activateInput(row) {
+        this._rows.forEach(row => row.classList.remove('none'))
         row.classList.add('none')
     }
 
     deactivateInput(row) {
+        /* this._rows.forEach(row => row.classList.remove('none')) */
         row.classList.remove('none')
+        
     }
 
     setEventListeners() {
         this._labels.forEach(label => label.addEventListener('click', () => this.activateInput(label.closest('.form-row'))))
+        this._form.addEventListener('submit', (e) => e.preventDefault())
         document.addEventListener('click', (e) => {
             const row = this._rows.find(row => row.classList.contains('none'))
             if (row && (e.target.parentNode !== row)) this.deactivateInput(row)

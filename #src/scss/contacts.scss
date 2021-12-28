@@ -1,0 +1,51 @@
+.contacts {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        max-width: 40%;
+    }
+
+    &__block {
+        margin-bottom: 24px;
+        &:first-of-type {
+            margin-top: 24px;
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__block-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+
+    &__block-text {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__form {
+        width: 445px;
+        border: 2px solid #e4ebf1;
+        border-radius: 3px;
+    }
+
+    .social {
+        a {
+            margin-right: 10px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
