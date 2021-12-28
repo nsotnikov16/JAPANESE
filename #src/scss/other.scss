@@ -51,7 +51,7 @@
         overflow: hidden;
         opacity: 0;
         transform: translateX(-200%);
-        transition: overflow, opacity, transform 0.8s ease-in;
+        transition: overflow, opacity, transform 0.7s ease-in;
         &._animate {
             overflow: visible;
             opacity: 1;

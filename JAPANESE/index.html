@@ -53,14 +53,14 @@
                 <span></span><span></span><span></span>
             </div>
             <ul class="menu__list">
-                <li class="menu__item"><a href="#" class="menu__item-link">Преимущества</a></li>
-                <li class="menu__item"><a href="#" class="menu__item-link">Запчасти</a></li>
-                <li class="menu__item"><a href="#" class="menu__item-link">Автосервис</a></li>
-                <li class="menu__item"><a href="#" class="menu__item-link">Контакты</a></li>
+                <li class="menu__item"><a href="#order" class="menu__item-link scroll-to">Преимущества</a></li>
+                <li class="menu__item"><a href="#spare-parts" class="menu__item-link scroll-to">Запчасти</a></li>
+                <li class="menu__item"><a href="#service" class="menu__item-link scroll-to">Автосервис</a></li>
+                <li class="menu__item"><a href="#contacts" class="menu__item-link scroll-to">Контакты</a></li>
             </ul>
         </nav>
 
-        <button class="btn header__btn">Заказать звонок</button>
+        <button data-pointer="callback" class="btn header__btn">Заказать звонок</button>
     </div>
 
 
@@ -154,7 +154,7 @@
     </div>
 </section>
             <!-- Нас выбирают -->
-            <section class="order section">
+            <section id="order" class="order section">
     <div class="page__container">
         <h3 class="section__subtitle">// Нас выбирают //</h3>
         <h2 class="section__title ">Почему заказывать запчасти у нас выгоднее?</h2>
@@ -219,7 +219,7 @@
     </div>
 </section>
             <!-- Запчасти -->
-            <section class="spare-parts section">
+            <section id="spare-parts" class="spare-parts section">
     <div class="page__container">
         <h3 class="section__subtitle">// запчасти</h3>
         <h2 class="section__title">узлы автомобиля</h2>
@@ -262,7 +262,7 @@
     </div>
 </section>
             <!-- Автосервис -->
-            <section class="service section">
+            <section id="service" class="service section">
     <div class="page__container">
         <h3 class="section__subtitle">// автосервис</h3>
         <h2 class="section__title">Поможем установить запчасти</h2>
@@ -352,7 +352,7 @@
     </div>
 </section>
             <!-- Контакты и обратная связь -->
-            <section class="contacts section">
+            <section id="contacts" class="contacts section">
     <div class="page__container">
         <div class="contacts__container">
             <div class="contacts__info">
@@ -436,10 +436,10 @@
                 <h3 class="footer__block-title">Навигация</h3>
                 <nav class="menu footer__menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="#" class="menu__item-link">Преимущества</a></li>
-                        <li class="menu__item"><a href="#" class="menu__item-link">Запчасти</a></li>
-                        <li class="menu__item"><a href="#" class="menu__item-link">Автосервис</a></li>
-                        <li class="menu__item"><a href="#" class="menu__item-link">Контакты</a></li>
+                        <li class="menu__item"><a href="#order" class="menu__item-link scroll-to">Преимущества</a></li>
+                        <li class="menu__item"><a href="#spare-parts" class="menu__item-link scroll-to">Запчасти</a></li>
+                        <li class="menu__item"><a href="#service" class="menu__item-link scroll-to">Автосервис</a></li>
+                        <li class="menu__item"><a href="#contacts" class="menu__item-link scroll-to">Контакты</a></li>
                     </ul>
                 </nav>
             </div>
@@ -491,31 +491,31 @@
 </footer>
     </div>
 
-    <!-- <div id="signup" class="popup">
+    <div id="callback" class="popup">
         <div class="popup__container">
             <div class="popup__content">
                 <form class="form">
-                    <img src="./img/form-signup.png" alt="Записаться" class="form__img">
-                    <h3 class="form__title">Записаться на прием</h3>
-                    <ul class="form__rows">
-                        <li class="form__row">
-                            <input type="text" autocomplete="off" placeholder="Ваше имя" name="name" required
-                                minlength="3" maxlength="20" class="form__input">
-                        </li>
-                        <li class="form__row">
-                            <label for="phone" class="form__label">Телефон</label>
-                            <input type="tel" autocomplete="off" required name="phone" id="phone"
-                                placeholder="+7 900 550 50 50" class="form__input">
-                        </li>
-                    </ul>
-                    <button class="btn">Записаться</button>
-                    <p class="form__politics">Нажимая на кпопку «Записаться» вы соглашаетесь на <a href="#">политику
-                            обработки данных</a></p>
+                    <h3 class="form-title">У ВАС ЕСТЬ ВОПРОСЫ?
+                        ЗАполните форму!</h3>
+                    <p class="form-subtitle">Мы вам перезвоним и подробно ответим на все ваши вопросы</p>
+                    <div class="form-row">
+                        <label for="contacts-phone" class="form-label">Ваш телефон <span>*</span></label>
+                        <input type="tel" maxlength="12" name="contacts-phone" id="contacts-phone" class="form-input" autocomplete="off" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contacts-name" class="form-label">Ваше имя (необязательно)</label>
+                        <input type="text" maxlength="30" name="contacts-name" id="contacts-name" class="form-input" autocomplete="off">
+                    </div>
+                    <div class="form-row message">
+                        <label for="contacts-message" class="form-label">Текст вопроса (необязательно)</label>
+                        <textarea type="text" name="contacts-message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
+                    </div>
+                    <button class="btn">Заказать звонок</button>
                 </form>
             </div>
             <button class="popup__close">&#10006;</button>
         </div>
-    </div> -->
+    </div>
 
     <!-- <div id="photo" class="popup">
         <div class="popup__container">

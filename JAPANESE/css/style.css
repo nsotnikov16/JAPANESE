@@ -536,11 +536,11 @@ body {
   -webkit-transform: translateX(-200%);
       -ms-transform: translateX(-200%);
           transform: translateX(-200%);
-  -webkit-transition: overflow, opacity, -webkit-transform 0.8s ease-in;
-  transition: overflow, opacity, -webkit-transform 0.8s ease-in;
-  -o-transition: overflow, opacity, transform 0.8s ease-in;
-  transition: overflow, opacity, transform 0.8s ease-in;
-  transition: overflow, opacity, transform 0.8s ease-in, -webkit-transform 0.8s ease-in;
+  -webkit-transition: overflow, opacity, -webkit-transform 0.7s ease-in;
+  transition: overflow, opacity, -webkit-transform 0.7s ease-in;
+  -o-transition: overflow, opacity, transform 0.7s ease-in;
+  transition: overflow, opacity, transform 0.7s ease-in;
+  transition: overflow, opacity, transform 0.7s ease-in, -webkit-transform 0.7s ease-in;
 }
 
 .section__subtitle._animate,
@@ -1180,6 +1180,68 @@ body {
 
 /* Попапы */
 
+.popup {
+  position: fixed;
+  z-index: 999999999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(17, 24, 39, 0.5);
+}
+
+.popup.popup_opened {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup__container {
+  position: relative;
+  padding-top: 10px;
+}
+
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 25px;
+  color: rgba(17, 24, 39, 0.5);
+  font-weight: 300;
+}
+
+.popup__img {
+  max-width: 50vw;
+  max-height: 70vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top center;
+     object-position: top center;
+  border-radius: 5px;
+}
+
+#photo.popup .popup__close {
+  color: white;
+  right: -10px;
+  top: -25px;
+}
+
 /* Формы */
 
 .form .form-row {
@@ -1241,6 +1303,7 @@ body {
 }
 
 .form:not(.banner__form) {
+  background: #fff;
   padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1553,9 +1616,21 @@ body {
   height: 40px;
 }
 
+@media (max-width: 1180px) {
+  .popup__img {
+    max-width: 70vw;
+  }
+}
+
 @media (max-width: 1024px) {
   .page__container {
     padding: 0 99px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup__img {
+    max-width: 85vw;
   }
 }
 

@@ -36,31 +36,31 @@
         @@include('components/_footer.html')
     </div>
 
-    <!-- <div id="signup" class="popup">
+    <div id="callback" class="popup">
         <div class="popup__container">
             <div class="popup__content">
                 <form class="form">
-                    <img src="./img/form-signup.png" alt="Записаться" class="form__img">
-                    <h3 class="form__title">Записаться на прием</h3>
-                    <ul class="form__rows">
-                        <li class="form__row">
-                            <input type="text" autocomplete="off" placeholder="Ваше имя" name="name" required
-                                minlength="3" maxlength="20" class="form__input">
-                        </li>
-                        <li class="form__row">
-                            <label for="phone" class="form__label">Телефон</label>
-                            <input type="tel" autocomplete="off" required name="phone" id="phone"
-                                placeholder="+7 900 550 50 50" class="form__input">
-                        </li>
-                    </ul>
-                    <button class="btn">Записаться</button>
-                    <p class="form__politics">Нажимая на кпопку «Записаться» вы соглашаетесь на <a href="#">политику
-                            обработки данных</a></p>
+                    <h3 class="form-title">У ВАС ЕСТЬ ВОПРОСЫ?
+                        ЗАполните форму!</h3>
+                    <p class="form-subtitle">Мы вам перезвоним и подробно ответим на все ваши вопросы</p>
+                    <div class="form-row">
+                        <label for="contacts-phone" class="form-label">Ваш телефон <span>*</span></label>
+                        <input type="tel" maxlength="12" name="contacts-phone" id="contacts-phone" class="form-input" autocomplete="off" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="contacts-name" class="form-label">Ваше имя (необязательно)</label>
+                        <input type="text" maxlength="30" name="contacts-name" id="contacts-name" class="form-input" autocomplete="off">
+                    </div>
+                    <div class="form-row message">
+                        <label for="contacts-message" class="form-label">Текст вопроса (необязательно)</label>
+                        <textarea type="text" name="contacts-message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
+                    </div>
+                    <button class="btn">Заказать звонок</button>
                 </form>
             </div>
             <button class="popup__close">&#10006;</button>
         </div>
-    </div> -->
+    </div>
 
     <!-- <div id="photo" class="popup">
         <div class="popup__container">
