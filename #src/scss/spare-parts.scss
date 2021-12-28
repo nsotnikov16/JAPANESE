@@ -1,0 +1,43 @@
+.spare-parts {
+    background: $background-section;
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1px;
+    }
+
+    &__card {
+        position: relative;
+        padding: 70px 35px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 313px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            z-index: 1;
+        }
+    }
+
+    &__card-title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+        max-width: 185px;
+        z-index: 2;
+    }
+
+    .btn {
+        width: 200px;
+        height: 60px;
+        z-index: 2;
+    }
+}

@@ -12,7 +12,7 @@
 $red: #e52929;
 $background-section: #f0f4f7;
 $black: #071c1f;
-$gray: #929DA3;
+$gray: #929da3;
 
 @import "fonts";
 
@@ -64,3 +64,12 @@ body {
 
 /* Формы */
 @import "form";
+
+/* Нас выбирают */
+@import "order";
+
+/* Запчасти */
+@import "spare-parts";
+
+/* Авто-сервис */
+@import "service";

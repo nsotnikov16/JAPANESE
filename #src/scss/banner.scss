@@ -133,30 +133,3 @@
     }
 }
 
-.form-row {
-    &.none {
-        .form-label {
-            display: none;
-        }
-
-        .form-input {
-            display: block;
-        }
-    }
-}
-
-.form-label {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-    max-width: 160px;
-    span {
-        color: $red;
-    }
-}
-.form-input {
-    display: none;
-    max-width: 160px;
-}
-.btn {
-}
