@@ -142,7 +142,7 @@
                 </svg>
                 <div class="form-row">
                     <label for="banner-phone" class="form-label banner__label">Ваш номер телефона <span>*</span></label>
-                    <input type="tel" name="banner-phone" id="banner-phone" maxlength="12" class="form-input">
+                    <input type="tel" name="banner-phone" id="banner-phone" maxlength="12" class="form-input" autocomplete="off" required>
                 </div>
                 <button class="btn banner__btn">Отправить</button>
             </div>
@@ -270,7 +270,11 @@
             на ваш автомобиль со скидкой 10%</p>
         <ul class="service__cards">
             <li class="service__card">
-                <img src="./img/service/engine.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/engine.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#engine"></use>
@@ -279,7 +283,11 @@
                 </div>
             </li>
             <li class="service__card">
-                <img src="./img/service/pendant.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/pendant.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#pendant"></use>
@@ -288,7 +296,11 @@
                 </div>
             </li>
             <li class="service__card">
-                <img src="./img/service/brake.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/brake.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#brake"></use>
@@ -297,7 +309,11 @@
                 </div>
             </li>
             <li class="service__card">
-                <img src="./img/service/cooling.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/cooling.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#cooling"></use>
@@ -306,7 +322,11 @@
                 </div>
             </li>
             <li class="service__card">
-                <img src="./img/service/TO.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/TO.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#TO"></use>
@@ -315,7 +335,11 @@
                 </div>
             </li>
             <li class="service__card">
-                <img src="./img/service/oil.png" alt="#" class="service__card-img">
+                <div class="service__img-block">
+                    <img src="./img/service/oil.png" alt="#" class="service__card-img">
+                    <button class="btn">Узнать цену</button>
+                </div>
+
                 <div class="service__block">
                     <svg class="service__icon">
                         <use href="./img/icons/icons.svg#oil"></use>
@@ -325,6 +349,62 @@
                 </div>
             </li>
         </ul>
+    </div>
+</section>
+            <!-- Контакты и обратная связь -->
+            <section class="contacts section">
+    <div class="page__container">
+        <div class="contacts__container">
+            <div class="contacts__info">
+                <h3 class="section__subtitle">// Контакты и обратная связь</h3>
+                <h2 class="section__title">Свяжитесь с нами</h2>
+                <div class="contacts__block">
+                    <h3 class="contacts__block-title">Мы находимся по адресу:</h3>
+                    <p class="contacts__block-text"><b>Магазин:</b> Сургут, Профсоюзов, 39/2</p>
+                    <p class="contacts__block-text"><b>Автосервис:</b> Сургут, Профсоюзов, 31/2</p>
+                </div>
+                <div class="contacts__block">
+                    <h3 class="contacts__block-title">График работы:</h3>
+                    <p class="contacts__block-text">Понедельник - суббота:
+                        с 09:00 до 19:00</p>
+                    <p class="contacts__block-text">Воскресенье:
+                        с 10:00 до 18:00</p>
+                </div>
+                <div class="contacts__block">
+                    <h3 class="contacts__block-title">Наш телефон:</h3>
+                    <p class="contacts__block-text">+7 (3462) 769-384</p>
+                </div>
+                <div class="contacts__block">
+                    <h3 class="contacts__block-title">Мы в мессенджерах:</h3>
+                    <div class="social">
+                        <a href='#'><svg>
+                                <use href="./img/icons/icons.svg#telegram"></use>
+                            </svg></a>
+                        <a href='#'><svg>
+                                <use href="./img/icons/icons.svg#whatsapp"></use>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            <form class="contacts__form form">
+                <h3 class="form-title">У ВАС ЕСТЬ ВОПРОСЫ?
+                    ЗАполните форму!</h3>
+                <p class="form-subtitle">Мы вам перезвоним и подробно ответим на все ваши вопросы</p>
+                <div class="form-row">
+                    <label for="contacts-phone" class="form-label">Ваш телефон <span>*</span></label>
+                    <input type="tel" maxlength="12" name="contacts-phone" id="contacts-phone" class="form-input" autocomplete="off" required>
+                </div>
+                <div class="form-row">
+                    <label for="contacts-name" class="form-label">Ваше имя (необязательно)</label>
+                    <input type="text" maxlength="30" name="contacts-name" id="contacts-name" class="form-input" autocomplete="off">
+                </div>
+                <div class="form-row message">
+                    <label for="contacts-message" class="form-label">Текст вопроса (необязательно)</label>
+                    <textarea type="text" name="contacts-message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
+                </div>
+                <button class="btn">Заказать звонок</button>
+            </form>
+        </div>
     </div>
 </section>
         </main>
