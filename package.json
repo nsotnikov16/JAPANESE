@@ -6,7 +6,7 @@
 	"author": "japanese",
 	"license": "ISC",
 	"scripts": {
-		"deploy": "gh-pages -d JAPANESE"
+		"deploy": "gh-pages -d japanese"
 	},
 	"devDependencies": {
 		"browser-sync": "latest",
