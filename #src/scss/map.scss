@@ -1,0 +1,36 @@
+.map {
+    height: 400px;
+    width: 100%;
+    &__info {
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 7px;
+        }
+
+        >* {
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__info-title {
+        font-size: 18px;
+        
+    }
+    &__info-row {
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+        p {
+
+        }
+    }
+}

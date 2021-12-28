@@ -121,8 +121,14 @@
         color: $black;
         background: #fff;
         width: 50px;
+        border-radius: 3px;
         &::after {
             font-size: 18px;
+        }
+
+        &:hover {
+            color: white;
+            background: $red;
         }
     }
     .swiper-button-prev {
