@@ -6,11 +6,13 @@
         width: 24px;
         /* display: flex; */
         flex-direction: column;
+
         span {
             display: block;
             height: 2px;
             width: 100%;
             background: #111827;
+
             margin-bottom: 5px;
             &:last-child {
                 margin-bottom: 0;
@@ -21,6 +23,9 @@
         }
         &:hover {
             cursor: pointer;
+            span {
+                background: $red;
+            }
         }
     }
 

@@ -1,6 +1,9 @@
 .banner {
     background: $background-section;
     position: relative;
+    @media (max-width: 1159px) {
+        height: 560px;
+    }
     &__container {
         /*  position: relative; */
     }
@@ -28,6 +31,9 @@
         position: absolute;
         z-index: 2;
         bottom: 20%;
+        @media (max-width: 1159px) {
+            bottom: 25%;
+        }
     }
 
     &__form-title {
@@ -85,10 +91,16 @@
 
     .swiper-wrapper {
         height: 520px;
+        @media (max-width: 1159px) {
+            height: 480px;
+        }
     }
     .swiper-slide {
         padding: 80px 0 0;
         background-repeat: no-repeat;
+        @media (max-width: 1159px) {
+            padding: 42px 0 0;
+        }
 
         &.slide1 {
             background-image: url(../img/banner/1.png);
@@ -111,9 +123,19 @@
         }
     }
     .swiper-pagination {
+        @media(max-width: 1159px) {
+            bottom: -10px;
+        }
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
+            background: #d8dee2;
+            opacity: 1;
+
+            &:hover:not(.swiper-pagination-bullet-active) {
+                border: 2px solid #d8dee2;
+                background: $red;
+            }
         }
         .swiper-pagination-bullet-active {
             background: $red;
@@ -122,27 +144,28 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-        @media(max-width: 1320px) {
+        @media (max-width: 1320px) {
             display: none;
         }
-        color: $black;
-        background: #fff;
-        width: 50px;
-        border-radius: 3px;
         &::after {
-            font-size: 18px;
+            all: initial;
         }
 
-        &:hover {
-            color: white;
-            background: $red;
-        }
+        position: absolute !important;
     }
+
+    .swiper-button-next.arrow,
+    .swiper-button-prev.arrow {
+        top: 40%;
+        bottom: 0;
+    }
+
     .swiper-button-prev {
         left: -75px;
+        transform: rotate(-90deg);
     }
     .swiper-button-next {
         right: -75px;
+        transform: rotate(90deg);
     }
 }
-
