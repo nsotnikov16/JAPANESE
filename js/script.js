@@ -21,17 +21,8 @@ var swiperBanners = new Swiper(".swiper-banner", {
     },
     on: {
         slideChange: function () {
-            /* const bannersSlides = document.querySelectorAll('.swiper-banners .swiper-slide')
-            setTimeout(() => {
-                bannersSlides.forEach(item => {
-                    const banner = item.querySelector('.banners__banner')
-                    banner.classList.remove('_animate')
-                    if (item.classList.contains('swiper-slide-active')) banner.classList.add('_animate')
-                })
-            }, 50) */
         },
         init: function () {
-            /* document.querySelector('.swiper-banner .swiper-slide ').classList.add('_animate') */
         }
     },
 });
@@ -47,7 +38,6 @@ class Form {
     }
 
     activateInput(row) {
-        this._rows.forEach(row => row.classList.remove('none'))
         row.classList.add('none')
     }
 
@@ -57,19 +47,20 @@ class Form {
 
     setEventListeners() {
         this._labels.forEach(label => label.addEventListener('click', () => this.activateInput(label.closest('.form-row'))))
-        this._form.addEventListener('submit', (e) => e.preventDefault())
         document.addEventListener('click', (e) => {
-            
-            const row = this._rows.find(row => row.classList.contains('none'))
-            if (row && (e.target.parentNode !== row)) this.deactivateInput(row)
+            const rows = this._rows.filter(row => row.classList.contains('none'))
+            rows.forEach(row => {
+                if (!rows.includes(e.target.parentNode) && row.querySelector('.form-input').value === '') this.deactivateInput(row)
+            })
         })
-
         this._inputs.forEach(input => input.addEventListener('focus', () => {
             if (!input.closest('.banner__form')) input.closest('.form-row').style.border = "2px solid rgba(229, 41, 41, 0.4)"
         }))
         this._inputs.forEach(input => input.addEventListener('focusout', () => {
+            if (input.value === '') this.deactivateInput(input.parentNode)
             if (!input.closest('.banner__form')) input.closest('.form-row').style.border = "2px solid #e4ebf1"
         }))
+        this._form.addEventListener('submit', (e) => e.preventDefault())
     }
 }
 

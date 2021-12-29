@@ -142,7 +142,7 @@
                 </svg>
                 <div class="form-row">
                     <label for="banner-phone" class="form-label banner__label">Ваш номер телефона <span>*</span></label>
-                    <input type="tel" name="banner-phone" id="banner-phone" maxlength="12" class="form-input" autocomplete="off" required>
+                    <input type="tel" name="phone" id="banner-phone" maxlength="12" class="form-input" autocomplete="off" required>
                 </div>
                 <button class="btn banner__btn">Отправить</button>
             </div>
@@ -230,33 +230,33 @@
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/1.png" alt="#">
                 <h3 class="spare-parts__card-title">Двигатель</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/2.png" alt="#">
                 <h3 class="spare-parts__card-title">КПП</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/3.png" alt="#">
                 <h3 class="spare-parts__card-title">Кузовные детали
                     и оптика</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/4.png" alt="#">
                 <h3 class="spare-parts__card-title">ДЕТАЛИ ПОДВЕСКИ</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/5.png" alt="#">
                 <h3 class="spare-parts__card-title">РАСХОДНИКИ (ТО)</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
             <li class="spare-parts__card">
                 <img src="./img/spare-parts/6.png" alt="#">
                 <h3 class="spare-parts__card-title">МАСЛА И ТЕХнические ЖИДКОСТИ</h3>
-                <button class="btn">Узнать цену</button>
+                <button data-pointer="callback" class="btn">Узнать цену</button>
             </li>
         </ul>
     </div>
@@ -272,7 +272,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/engine.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -285,7 +285,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/pendant.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -298,7 +298,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/brake.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -311,7 +311,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/cooling.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -324,7 +324,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/TO.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -337,7 +337,7 @@
             <li class="service__card">
                 <div class="service__img-block">
                     <img src="./img/service/oil.png" alt="#" class="service__card-img">
-                    <button class="btn">Узнать цену</button>
+                    <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
                 <div class="service__block">
@@ -392,15 +392,15 @@
                 <p class="form-subtitle">Мы вам перезвоним и подробно ответим на все ваши вопросы</p>
                 <div class="form-row">
                     <label for="contacts-phone" class="form-label">Ваш телефон <span>*</span></label>
-                    <input type="tel" maxlength="12" name="contacts-phone" id="contacts-phone" class="form-input" autocomplete="off" required>
+                    <input type="tel" maxlength="12" name="phone" id="contacts-phone" class="form-input" autocomplete="off" required>
                 </div>
                 <div class="form-row">
                     <label for="contacts-name" class="form-label">Ваше имя (необязательно)</label>
-                    <input type="text" maxlength="30" name="contacts-name" id="contacts-name" class="form-input" autocomplete="off">
+                    <input type="text" maxlength="30" name="name" id="contacts-name" class="form-input" autocomplete="off">
                 </div>
                 <div class="form-row message">
                     <label for="contacts-message" class="form-label">Текст вопроса (необязательно)</label>
-                    <textarea type="text" name="contacts-message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
+                    <textarea type="text" name="message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
                 </div>
                 <button class="btn">Заказать звонок</button>
             </form>
@@ -447,7 +447,7 @@
                 <h3 class="footer__block-title">Информация</h3>
                 <p class="footer__requisites gray">ИП Саварин А.Ю.<br> ОГРНИП: 311860232000051</p>
                 <a href="#" class="footer__politic">Политика конфиденциальности</a>
-                <button class="btn">Заказать звонок</button>
+                <button data-pointer="callback" class="btn">Заказать звонок</button>
             </div>
             <div class="footer__block">
                 <h3 class="footer__block-title">Контакты</h3>
@@ -495,22 +495,25 @@
         <div class="popup__container">
             <div class="popup__content">
                 <form class="form">
-                    <h3 class="form-title">У ВАС ЕСТЬ ВОПРОСЫ?
-                        ЗАполните форму!</h3>
-                    <p class="form-subtitle">Мы вам перезвоним и подробно ответим на все ваши вопросы</p>
+                    <h3 class="form-title">оставьте ЗАЯВКУ</h3>
+                    <p class="form-subtitle">Мы вам перезвоним через 3 минуты
+                        и подробно ответим на все ваши вопросы</p>
                     <div class="form-row">
-                        <label for="contacts-phone" class="form-label">Ваш телефон <span>*</span></label>
-                        <input type="tel" maxlength="12" name="contacts-phone" id="contacts-phone" class="form-input" autocomplete="off" required>
+                        <label for="callback-phone" class="form-label">Ваш телефон <span>*</span></label>
+                        <input type="tel" maxlength="12" name="phone" id="callback-phone" class="form-input"
+                            autocomplete="off" required>
                     </div>
                     <div class="form-row">
-                        <label for="contacts-name" class="form-label">Ваше имя (необязательно)</label>
-                        <input type="text" maxlength="30" name="contacts-name" id="contacts-name" class="form-input" autocomplete="off">
+                        <label for="callback-name" class="form-label">Ваше имя (необязательно)</label>
+                        <input type="text" maxlength="30" name="name" id="callback-name" class="form-input"
+                            autocomplete="off">
                     </div>
                     <div class="form-row message">
-                        <label for="contacts-message" class="form-label">Текст вопроса (необязательно)</label>
-                        <textarea type="text" name="contacts-message" id="contacts-message" class="form-input" autocomplete="off"></textarea>
+                        <label for="callback-message" class="form-label">Текст вопроса (необязательно)</label>
+                        <textarea type="text" name="message" id="callback-message" class="form-input"
+                            autocomplete="off"></textarea>
                     </div>
-                    <button class="btn">Заказать звонок</button>
+                    <button class="btn">Отправить</button>
                 </form>
             </div>
             <button class="popup__close">&#10006;</button>

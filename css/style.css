@@ -1275,6 +1275,9 @@ body {
 .form .form-input {
   display: none;
   max-width: 160px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
 }
 
 .form .form-title {
@@ -1312,7 +1315,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 550px;
 }
 
 .form:not(.banner__form) .form-input {
@@ -1328,6 +1330,10 @@ body {
 
 .form:not(.banner__form) .form-row.message {
   min-height: 80px;
+}
+
+#callback .form {
+  max-width: 445px;
 }
 
 /* Нас выбирают */
@@ -1515,6 +1521,7 @@ body {
   left: 23%;
   width: 200px;
   height: 60px;
+  z-index: 9999;
 }
 
 .service__card-img {
@@ -1601,6 +1608,7 @@ body {
   width: 445px;
   border: 2px solid #e4ebf1;
   border-radius: 3px;
+  height: 550px;
 }
 
 .contacts .social a {
