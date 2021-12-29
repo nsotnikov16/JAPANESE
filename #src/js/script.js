@@ -31,7 +31,7 @@ window.addEventListener('resize', () => {
 
 // Swiper Banner 
 var swiperBanners = new Swiper(".swiper-banner", {
-
+    loop: true,
     autoplay: {
         delay: 4000,
     },

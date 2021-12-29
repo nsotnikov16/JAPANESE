@@ -7,7 +7,8 @@
 
     &__title {
         font-weight: 700;
-        font-size: 45px;
+        /* font-size: 45px; */
+        font-size: 42px;
         line-height: 53px;
         letter-spacing: -0.03em;
         padding-bottom: 12px;
@@ -121,6 +122,9 @@
 
     .swiper-button-next,
     .swiper-button-prev {
+        @media(max-width: 1320px) {
+            display: none;
+        }
         color: $black;
         background: #fff;
         width: 50px;

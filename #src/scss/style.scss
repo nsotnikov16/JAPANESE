@@ -30,7 +30,11 @@ body {
     max-width: 1160px;
     
     @media (max-width: 1159px) {
-      padding: 0 60px;
+      padding: 0 42px;
+    }
+
+    @media(max-width: 1000px) {
+      padding: 0 76px;
     }
 
     @media (max-width: 680px) {
