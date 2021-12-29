@@ -1,15 +1,26 @@
 // Mobile Header 
 const header = document.querySelector('.header')
 const burger = header.querySelector('.menu__burger')
-burger.addEventListener('click', () => header.classList.toggle('open-menu'))
-/* const headerTop = header.querySelector('.header__top')
+const headerMobile = header.querySelector('.header_mobile')
+
+const headerMobileContainer = headerMobile.querySelector('.page__container')
+
+burger.addEventListener('click', () => headerMobile.classList.add('open-menu'))
+
+const headerTop = header.querySelector('.header__top')
+const headerTopMobile = headerTop.cloneNode(true);
+headerMobileContainer.append(headerTopMobile)
+const burgerMobile = headerMobile.querySelector('.menu__burger')
 const headerContacts = header.querySelector('.header__contacts')
 const headerSocial = header.querySelector('.header__contacts-social')
 const headerBtn = header.querySelector('.header__btn')
 const headerMenuList = header.querySelector('.header__menu .menu__list')
 const headerMenuBlock = header.querySelector('.header__menu .menu__block')
-
-const transferElements = [headerBtn, headerSocial]
+headerMenuBlock.querySelector('.header__contacts.mobile').remove()
+headerMenuBlock.querySelector('.header__btn.mobile').remove()
+headerMobileContainer.querySelector('.header__contacts').remove()
+burgerMobile.addEventListener('click', () => headerMobile.classList.remove('open-menu'))
+/*const transferElements = [headerBtn, headerSocial]
 
 
 
@@ -228,7 +239,7 @@ if (animItems.length > 0) {
 
 // Scroll To
 $('.scroll-to').on('click', function () {
-
+    headerMobile.classList.remove('open-menu')
     let href = $(this).attr('href');
 
     $('html, body').animate({

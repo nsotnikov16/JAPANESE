@@ -3,6 +3,31 @@
     position: relative;
     @media (max-width: 1159px) {
         height: 560px;
+
+        &__title {
+            font-size: 38px;
+        }
+
+        &__description {
+            max-width: 385px;
+        }
+
+        .swiper-banner .swiper-slide {
+            position: relative;
+            /* background-color: rgba(255,255,255,0.4); */
+            &::after {
+                content : "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: $background-section;
+                width: 100%;
+                height: 100%;
+                opacity : 0.5;
+                z-index: -1;
+            }
+        }
     }
     &__container {
         /*  position: relative; */
@@ -32,7 +57,7 @@
         z-index: 2;
         bottom: 20%;
         @media (max-width: 1159px) {
-            bottom: 25%;
+            bottom: 30%;
         }
     }
 

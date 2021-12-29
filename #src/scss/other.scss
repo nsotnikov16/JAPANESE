@@ -1,117 +1,143 @@
 .visually-hidden {
-    display: none;
+  display: none;
 }
 
 .btn {
-    background: $red;
-    color: #fff;
-    border-radius: 3px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    font-weight: 500;
-    text-transform: uppercase;
-    box-shadow: 0px 2px 10px rgba(229, 41, 41, 0.3);
-    &:active {
-        background: #d8dee2;
-        color: $red;
-    }
+  background: $red;
+  color: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0px 2px 10px rgba(229, 41, 41, 0.3);
+  &:active {
+    background: #d8dee2;
+    color: $red;
+  }
 
-    &:hover {
-        color: $red;
-        background: #fff;
-    }
+  &:hover {
+    color: $red;
+    background: #fff;
+  }
 }
 
 .section {
-    padding: 115px 0;
+  padding: 115px 0;
 
-    &__subtitle {
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        text-transform: uppercase;
-        color: $red;
-        padding-bottom: 20px;
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $red;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 24px;
+    line-height: 30px;
+    margin: 20px 0 40px;
+  }
+
+  &__subtitle,
+  &__title,
+  &__description {
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-200%);
+    transition: overflow, opacity, transform 0.7s ease-in;
+    &._animate {
+      overflow: visible;
+      opacity: 1;
+      transform: translate(0);
     }
+  }
 
+  @media (max-width: 1159px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 1024px) {
     &__title {
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 55px;
-        text-transform: uppercase;
+      font-size: 35px;
+      line-height: 43px;
+    }
+  }
+  @media (max-width: 768px) {
+    &__description {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    padding: 40px 0;
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
     }
 
     &__description {
-        font-size: 24px;
-        line-height: 30px;
-        margin: 20px 0 40px;
+      font-size: 17px;
+      line-height: 21px;
     }
-
-    &__subtitle,
-    &__title,
-    &__description {
-        overflow: hidden;
-        opacity: 0;
-        transform: translateX(-200%);
-        transition: overflow, opacity, transform 0.7s ease-in;
-        &._animate {
-            overflow: visible;
-            opacity: 1;
-            transform: translate(0);
-        }
-    }
-
-    @media (max-width: 1159px) {
-        padding: 60px 0;
-    }
+  }
 }
 
 .social {
+  display: flex;
+
+  align-items: center;
+
+  &__icons {
     display: flex;
-
     align-items: center;
-
-    &__icons {
-        display: flex;
-        align-items: center;
-    }
+  }
 }
 
 .arrow {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 50px;
-    height: 50px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1.93333px solid #e4ebf1;
-    border-radius: 2.9px;
-    &:hover {
-        cursor: pointer;
-        border: 1.93333px solid $red;
-        span {
-            background: white;
-        }
-        background: $red;
-    }
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.93333px solid #e4ebf1;
+  border-radius: 2.9px;
+  &:hover {
+    cursor: pointer;
+    border: 1.93333px solid $red;
     span {
-        width: 6px;
-        height: 2px;
-        background: $black;
-        &:first-child {
-            transform: rotate(-45deg);
-        }
-        &:last-child {
-            transform: rotate(45deg);
-            margin-left: -3px;
-        }
+      background: white;
     }
+    background: $red;
+  }
+  span {
+    width: 6px;
+    height: 2px;
+    background: $black;
+    &:first-child {
+      transform: rotate(-45deg);
+    }
+    &:last-child {
+      transform: rotate(45deg);
+      margin-left: -2px;
+    }
+  }
 }
