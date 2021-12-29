@@ -752,7 +752,7 @@ body {
   height: 50px;
   grid-column: 4/5;
   justify-self: end;
-  margin-left: 93px;
+  margin-left: 67px;
 }
 
 .header__btn.mobile {
@@ -830,6 +830,10 @@ body {
 
 .menu__burger:hover {
   cursor: pointer;
+}
+
+.menu__burger:hover span {
+  background: #e52929;
 }
 
 .menu__list {
@@ -995,6 +999,13 @@ body {
 .swiper-banner .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
+  background: #d8dee2;
+  opacity: 1;
+}
+
+.swiper-banner .swiper-pagination .swiper-pagination-bullet:hover:not(.swiper-pagination-bullet-active) {
+  border: 2px solid #d8dee2;
+  background: #e52929;
 }
 
 .swiper-banner .swiper-pagination .swiper-pagination-bullet-active {
@@ -1003,29 +1014,32 @@ body {
 
 .swiper-banner .swiper-button-next,
 .swiper-banner .swiper-button-prev {
-  color: #071c1f;
-  background: #fff;
-  width: 50px;
-  border-radius: 3px;
+  position: absolute !important;
 }
 
 .swiper-banner .swiper-button-next::after,
 .swiper-banner .swiper-button-prev::after {
-  font-size: 18px;
+  all: initial;
 }
 
-.swiper-banner .swiper-button-next:hover,
-.swiper-banner .swiper-button-prev:hover {
-  color: white;
-  background: #e52929;
+.swiper-banner .swiper-button-next.arrow,
+.swiper-banner .swiper-button-prev.arrow {
+  top: 40%;
+  bottom: 0;
 }
 
 .swiper-banner .swiper-button-prev {
   left: -75px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .swiper-banner .swiper-button-next {
   right: -75px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 /* Яндекс Карты */
@@ -1300,7 +1314,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(17, 24, 39, 0.5);
+  /* background: rgba(17,24,39, 0.5);  */
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .popup.popup_opened {
@@ -1323,6 +1338,10 @@ body {
   font-size: 25px;
   color: rgba(17, 24, 39, 0.5);
   font-weight: 300;
+}
+
+.popup__close:hover {
+  color: #e52929;
 }
 
 .popup__img {
@@ -1433,6 +1452,8 @@ body {
 
 #callback .form {
   max-width: 445px;
+  border-radius: 3px;
+  border: 2px solid #E4EBF1;
 }
 
 /* Нас выбирают */
@@ -1440,12 +1461,19 @@ body {
 .order__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border: 2px solid #e4ebf1;
+  border-bottom: none;
   border-radius: 3px;
 }
 
 .order__card {
   padding: 35px;
-  border: 1px solid #e4ebf1;
+  border-right: 2px solid #e4ebf1;
+  border-bottom: 2px solid #e4ebf1;
+}
+
+.order__card:nth-child(4n) {
+  border-right: none;
 }
 
 .order__card:hover {
@@ -1919,15 +1947,33 @@ body {
     width: 100%;
     margin-top: 35px;
   }
-}
 
-@media (max-width: 1000px) {
-  .page__container {
-    padding: 0 76px;
+  .banner {
+    height: 560px;
+  }
+
+  .banner__form {
+    bottom: 25%;
+  }
+
+  .swiper-banner .swiper-wrapper {
+    height: 480px;
+  }
+
+  .swiper-banner .swiper-slide {
+    padding: 42px 0 0;
+  }
+
+  .swiper-banner .swiper-pagination {
+    bottom: -10px;
   }
 }
 
 @media (max-width: 768px) {
+  .page__container {
+    padding: 0 76px;
+  }
+
   .header__btn {
     margin-right: 30px;
     width: 200px;
