@@ -28,6 +28,9 @@
     .form-input {
         display: none;
         max-width: 160px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
     }
 
     .form-title {
@@ -58,7 +61,6 @@
     padding: 50px;
     display: flex;
     flex-direction: column;
-    height: 550px;
     .form-input {
         max-width: 100%;
         width: 100%;
@@ -71,6 +73,9 @@
         &.message {
             min-height: 80px;
         }
-        
     }
+}
+
+#callback .form {
+    max-width: 445px;
 }
