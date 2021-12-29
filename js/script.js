@@ -1,6 +1,37 @@
+// Mobile Header 
+const header = document.querySelector('.header')
+const burger = header.querySelector('.menu__burger')
+burger.addEventListener('click', () => header.classList.toggle('open-menu'))
+/* const headerTop = header.querySelector('.header__top')
+const headerContacts = header.querySelector('.header__contacts')
+const headerSocial = header.querySelector('.header__contacts-social')
+const headerBtn = header.querySelector('.header__btn')
+const headerMenuList = header.querySelector('.header__menu .menu__list')
+const headerMenuBlock = header.querySelector('.header__menu .menu__block')
+
+const transferElements = [headerBtn, headerSocial]
+
+
+
+function headerMobile() {
+    transferElements.forEach(el => headerMenuBlock.append(el))
+}
+
+function headerNoMobile() {
+    headerTop.append(headerBtn)
+    headerContacts.append(headerSocial)
+}
+
+if (window.innerWidth < 768) headerMobile()
+
+window.addEventListener('resize', () => {
+    window.innerWidth < 768 ? headerMobile() : headerNoMobile()
+}) */
+
+
 // Swiper Banner 
 var swiperBanners = new Swiper(".swiper-banner", {
-
+    loop: true,
     autoplay: {
         delay: 4000,
     },
