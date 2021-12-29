@@ -71,6 +71,9 @@
         a {
             text-decoration: underline;
             color: $gray;
+            &:hover {
+                color: $red;
+            }
         }
     }
 }
