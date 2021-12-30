@@ -2464,7 +2464,7 @@ body {
   }
 
   #callback .form {
-    max-width: 320px;
+    max-width: calc(320px + 170 * (100vw - 360px) / 480);
     padding: 55px 25px 40px;
   }
 
