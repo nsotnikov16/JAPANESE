@@ -598,6 +598,10 @@ body {
   border-radius: 2.9px;
 }
 
+.arrow.scroll-to {
+  z-index: 9999999999999;
+}
+
 .arrow:hover {
   cursor: pointer;
   border: 1.93333px solid #e52929;
@@ -2459,6 +2463,11 @@ body {
 }
 
 @media (max-width: 480px) {
+  .arrow.scroll-to {
+    bottom: 35px;
+    right: 35px;
+  }
+
   .banner__block {
     margin-top: 65%;
   }
