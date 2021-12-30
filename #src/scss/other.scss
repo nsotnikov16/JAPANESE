@@ -120,6 +120,13 @@
   align-items: center;
   border: 1.93333px solid #e4ebf1;
   border-radius: 2.9px;
+  &.scroll-to {
+    z-index: 9999999999999;
+    @media(max-width: 480px) {
+      bottom: 35px;
+      right: 35px;
+    }
+  }
   &:hover {
     cursor: pointer;
     border: 1.93333px solid $red;
