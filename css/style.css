@@ -898,6 +898,10 @@ body {
   position: relative;
 }
 
+.banner__btn-slide {
+  display: none;
+}
+
 .banner__container {
   /*  position: relative; */
 }
@@ -1281,6 +1285,7 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
+  color: #2a3540;
 }
 
 .footer__development {
@@ -1478,7 +1483,7 @@ body {
 #callback .form {
   max-width: 445px;
   border-radius: 3px;
-  border: 2px solid #E4EBF1;
+  border: 2px solid #e4ebf1;
 }
 
 /* Нас выбирают */
@@ -1650,6 +1655,20 @@ body {
 
 .service__img-block {
   position: relative;
+  /*  */
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*  */
 }
 
 .service__img-block::after {
@@ -1667,12 +1686,9 @@ body {
 
 .service__img-block .btn {
   display: none;
-  position: absolute;
-  top: 35%;
-  left: 23%;
   width: 200px;
   height: 60px;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .service__card-img {
@@ -1998,7 +2014,7 @@ body {
     background: #f0f4f7;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0;
     z-index: -1;
   }
 
@@ -2012,6 +2028,24 @@ body {
 
   .swiper-banner .swiper-slide {
     padding: 42px 0 0;
+  }
+
+  .swiper-banner .swiper-slide.slide1 {
+    background-size: 60%;
+  }
+
+  .swiper-banner .swiper-slide.slide2 {
+    background-size: 59%;
+    background-position: 100% 50%;
+  }
+
+  .swiper-banner .swiper-slide.slide3 {
+    background-size: 50%;
+  }
+
+  .swiper-banner .swiper-slide.slide4 {
+    background-size: 60%;
+    background-position: 112% 35%;
   }
 
   .swiper-banner .swiper-pagination {
@@ -2040,6 +2074,10 @@ body {
     margin-left: 20px;
   }
 
+  .service__card:hover .service__img-block {
+    height: calc(100% + 40px);
+  }
+
   .service__icon {
     width: 32px;
     height: 32px;
@@ -2051,12 +2089,30 @@ body {
     height: 80px;
   }
 
-  .service__block:hover .service__img-block {
-    height: calc(100% + 40px);
+  .service__img-block {
+    height: 178px;
   }
 
-  .service__img-block .btn {
-    left: 11%;
+  .contacts__form {
+    width: 380px;
+    padding: 52px 40px !important;
+  }
+}
+
+@media (max-width: 1019px) {
+  .banner .swiper-banner .swiper-slide::after {
+    opacity: 0.7;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: 70px 130px;
+  }
+
+  .footer__bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px 205px;
   }
 }
 
@@ -2087,6 +2143,55 @@ body {
     width: 200px;
   }
 
+  .banner {
+    height: 450px;
+  }
+
+  .banner__title {
+    line-height: 45px;
+  }
+
+  .banner__form {
+    bottom: 18%;
+  }
+
+  .swiper-banner .swiper-wrapper {
+    height: 450px;
+  }
+
+  .swiper-banner .swiper-slide.slide1 {
+    background-size: 100%;
+    background-position: 55px 60%;
+  }
+
+  .swiper-banner .swiper-slide.slide2 {
+    background-size: 80%;
+    background-position: 100% 30%;
+  }
+
+  .swiper-banner .swiper-slide.slide3 {
+    background-size: 65%;
+    background-position: 100% 55%;
+  }
+
+  .swiper-banner .swiper-slide.slide4 {
+    background-image: none;
+  }
+
+  .swiper-banner .swiper-slide.slide4::after {
+    left: -75px;
+    width: 100vw;
+    background-image: url(../img/banner/4.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    background-position: 280% 100%;
+  }
+
+  .swiper-banner .swiper-pagination {
+    bottom: 25px;
+  }
+
   .popup__img {
     max-width: 85vw;
   }
@@ -2111,6 +2216,23 @@ body {
 
   .service__cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contacts__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts__form {
+    margin-top: 60px;
+    width: 100%;
+    height: initial;
+  }
+
+  .contacts__info {
+    max-width: 100%;
   }
 }
 
@@ -2142,7 +2264,6 @@ body {
 
   .header__brands {
     width: 100vw;
-    overflow: auto;
     -webkit-box-pack: initial;
         -ms-flex-pack: initial;
             justify-content: initial;
@@ -2154,6 +2275,10 @@ body {
 
   .header__brand:last-child {
     margin-right: 0;
+  }
+
+  .swiper-banner .swiper-slide.slide4::after {
+    left: -20px;
   }
 }
 
@@ -2210,7 +2335,105 @@ body {
 }
 
 @media (max-width: 580px) {
+  .banner__btn-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    margin: 8% auto;
+  }
+
+  .banner__block {
+    /*  margin-top: 250px;
+    margin-top: calc(240px + (10 + 10 * 0.7) * ((100vw - 360px) / 580)); */
+    margin-top: 60%;
+  }
+
+  .banner {
+    height: 566px;
+  }
+
+  .banner .swiper-banner .swiper-slide {
+    padding: 0;
+    /* background-position: center !important; */
+  }
+
+  .banner .swiper-banner .swiper-slide::after {
+    all: initial;
+  }
+
+  .banner__title {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -0.03em;
+  }
+
+  .banner__description {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .banner__form {
+    display: none;
+  }
+
+  .swiper-banner .swiper-wrapper {
+    height: 566px;
+  }
+
+  .swiper-banner .swiper-slide.slide1 {
+    background-size: 100%;
+    background-position: 100% 12%;
+  }
+
+  .swiper-banner .swiper-slide.slide2 {
+    background-size: 100%;
+    background-position: 100% 10%;
+  }
+
+  .swiper-banner .swiper-slide.slide3 {
+    background-size: 65%;
+    background-position: 55% 15%;
+  }
+
+  .swiper-banner .swiper-slide.slide4 {
+    background-image: url(../img/banner/4.png);
+    background-size: 80%;
+    background-position: 50% 10%;
+  }
+
+  .swiper-banner .swiper-slide.slide4::after {
+    all: initial;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: 68px;
+  }
+
+  .footer__bottom {
+    grid-template-columns: 1fr -webkit-max-content;
+    grid-template-columns: 1fr max-content;
+    gap: 0;
+  }
+
+  .form .form-title {
+    font-size: 22px;
+    line-height: 27px;
+  }
+
+  .form .form-subtitle {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
   .order .section__title {
+    text-align: left;
+    margin: 0;
+  }
+
+  .order .section__subtitle {
     text-align: left;
   }
 
@@ -2222,14 +2445,56 @@ body {
     grid-template-columns: 1fr;
   }
 
-  .service__img-block .btn {
-    left: 30%;
+  .service__img-block {
+    height: calc(178px + 255 * (100vw - 360px) / 580);
+  }
+
+  .service__card:hover .service__img-block {
+    height: calc(210px + 306 * (100vw - 360px) / 580);
+  }
+
+  .contacts__form {
+    padding: 40px 25px !important;
   }
 }
 
-@media (max-width: 579px) {
-  .service__img-block .btn {
-    left: calc(14% + 51 * (100vw - 320px) / 579);
+@media (max-width: 480px) {
+  .banner__block {
+    margin-top: 65%;
+  }
+
+  #callback .form {
+    max-width: 320px;
+    padding: 55px 25px 40px;
+  }
+
+  #callback .form .form-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  #callback .form .form-title {
+    font-size: 24px;
+    line-height: 30px;
+    /* text-align: center; */
+  }
+}
+
+@media (max-width: 430px) {
+  .footer__development p {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .banner__block {
+    margin-top: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  .banner__block {
+    margin-top: 75%;
   }
 }
 
@@ -2242,9 +2507,57 @@ body {
     all: initial;
   }
 
+  .banner__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .banner__description {
+    font-size: 15px;
+  }
+
+  #callback .form {
+    max-width: 290px;
+    padding: 40px 15px;
+  }
+
   .order__card {
     width: 250px;
     margin-right: 10px;
     padding: 20px;
+  }
+
+  .service__img-block {
+    height: 200px;
+  }
+
+  .service__card:hover .service__img-block {
+    height: 225px;
+  }
+
+  .contacts__form {
+    padding: 40px 12px;
+  }
+}
+
+@media (max-width: 580px) and (min-width: 460px) {
+  .banner {
+    height: 620px;
+  }
+
+  .banner .swiper-pagination {
+    bottom: -35px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 581px) {
+  .footer__top,
+  .footer__bottom {
+    gap: 70px 10%;
+  }
+
+  .footer__bottom {
+    grid-template-columns: 1fr -webkit-max-content;
+    grid-template-columns: 1fr max-content;
   }
 }

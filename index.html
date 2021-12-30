@@ -143,28 +143,37 @@
             </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide1">
-                    <h2 class="banner__title">Запчасти и автосервис для японских автомобилей</h2>
-                    <p class="banner__description">Предложим лучшую цену по городу.<br>
-                        Нашли дешевле, скажите нам,<br>
-                        и мы предложим еще дешевле!</p>
-                     <!-- <img class="banner-img1" src="./img/banner/1.png" alt="1"> -->
+                    <div class="banner__block">
+                        <h2 class="banner__title">Запчасти и автосервис для японских автомобилей</h2>
+                        <p class="banner__description">Предложим лучшую цену по городу.<br>
+                            Нашли дешевле, скажите нам,<br>
+                            и мы предложим еще дешевле!</p>
+                        <button data-pointer="callback" class="btn banner__btn-slide">Заказать звонок</button>
+                    </div>
                 </div>
                 <div class="swiper-slide slide2">
-                    <h2 class="banner__title">Диагностика + эндоскопия двигателя - бесплатно</h2>
-                    <p class="banner__description">Акция действительна только в декабре!</p>
-                    <!-- <img class="banner-img2" src="./img/banner/2.png" alt="2"> -->
+                    <div class="banner__block">
+                        <h2 class="banner__title">Диагностика + эндоскопия двигателя - бесплатно</h2>
+                        <p class="banner__description">Акция действительна только в декабре!</p>
+                        <button data-pointer="callback" class="btn banner__btn-slide">Заказать звонок</button>
+                    </div>
                 </div>
                 <div class="swiper-slide slide3">
-                    <h2 class="banner__title">Запишитесь на <span>бесплатный</span> осмотр автомобиля
-                        по <span>65</span> параметрам</h2>
-                    <p class="banner__description"></p>
-                    <!-- <img class="banner-img3" src="./img/banner/3.png" alt="3"> -->
+                    <div class="banner__block">
+                        <h2 class="banner__title">Запишитесь на <span>бесплатный</span> осмотр автомобиля
+                            по <span>65</span> параметрам</h2>
+                        <p class="banner__description"></p>
+                        <button data-pointer="callback" class="btn banner__btn-slide">Заказать звонок</button>
+                    </div>
                 </div>
                 <div class="swiper-slide slide4">
-                    <h2 class="banner__title">Диагностика РАЗВАЛ-СХОЖДЕНИЕ <span>бесплатно</span></h2>
-                    <p class="banner__description">Проверим геометрию колёс всего за 0 рублей!<br> Акция действительна
-                        только в декабре. </p>
-                    <!-- <img class="banner-img4" src="./img/banner/4.png" alt="4"> -->
+                    <div class="banner__block">
+                        <h2 class="banner__title">Диагностика РАЗВАЛ-СХОЖДЕНИЕ <span>бесплатно</span></h2>
+                        <p class="banner__description">Проверим геометрию колёс всего за 0 рублей!<br> Акция
+                            действительна
+                            только в декабре. </p>
+                        <button data-pointer="callback" class="btn banner__btn-slide">Заказать звонок</button>
+                    </div>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -177,11 +186,12 @@
                 </svg>
                 <div class="form-row">
                     <label for="banner-phone" class="form-label banner__label">Ваш номер телефона <span>*</span></label>
-                    <input type="tel" name="phone" id="banner-phone" maxlength="12" class="form-input" autocomplete="off" required>
+                    <input type="tel" name="phone" id="banner-phone" maxlength="12" class="form-input"
+                        autocomplete="off" required>
                 </div>
                 <button class="btn banner__btn">Отправить</button>
             </div>
-            <p class="banner__form-politic">
+            <p style="visibility: hidden;" class="banner__form-politic">
                 Отправляя форму, вы соглашаетесь
                 с <a href="#">политикой конфиденциальности</a>
             </p>
@@ -305,8 +315,7 @@
             на ваш автомобиль со скидкой 10%</p>
         <ul class="service__cards">
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/engine.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/engine.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -318,8 +327,7 @@
                 </div>
             </li>
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/pendant.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/pendant.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -331,8 +339,7 @@
                 </div>
             </li>
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/brake.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/brake.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -344,8 +351,7 @@
                 </div>
             </li>
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/cooling.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/cooling.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -357,8 +363,7 @@
                 </div>
             </li>
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/TO.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/TO.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -370,8 +375,7 @@
                 </div>
             </li>
             <li class="service__card">
-                <div class="service__img-block">
-                    <img src="./img/service/oil.png" alt="#" class="service__card-img">
+                <div class="service__img-block" style="background-image: url(./img/service/oil.png)">
                     <button data-pointer="callback" class="btn">Узнать цену</button>
                 </div>
 
@@ -481,7 +485,7 @@
             <div class="footer__block">
                 <h3 class="footer__block-title">Информация</h3>
                 <p class="footer__requisites gray">ИП Саварин А.Ю.<br> ОГРНИП: 311860232000051</p>
-                <a href="#" class="footer__politic">Политика конфиденциальности</a>
+                <a style="visibility: hidden;" href="#" class="footer__politic">Политика конфиденциальности</a>
                 <button data-pointer="callback" class="btn">Заказать звонок</button>
             </div>
             <div class="footer__block">
