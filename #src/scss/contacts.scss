@@ -49,4 +49,39 @@
             height: 40px;
         }
     }
+    @media (max-width: 1024px) {
+        &__form {
+            width: 380px;
+            padding: 52px 40px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__container {
+            flex-direction: column;
+        }
+
+        &__form {
+            margin-top: 60px;
+            width: 100%;
+            height: initial;
+        }
+
+        &__info {
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 580px) {
+        &__form {
+            padding: 40px 25px !important;
+            
+        }
+    }
+
+    @media(max-width: 320px) {
+        &__form {
+            padding: 40px 12px;
+        }
+    }
 }

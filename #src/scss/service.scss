@@ -33,6 +33,15 @@
   &__img-block {
     position: relative;
 
+    /*  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  */
+
     &::after {
       position: absolute;
       content: "";
@@ -40,21 +49,14 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(
-        90deg,
-        #0150b7 -34.86%,
-        rgba(20, 82, 145, 0) 100%
-      );
+      background: linear-gradient(90deg, #0150b7 -34.86%, rgba(20, 82, 145, 0) 100%);
       z-index: 20;
     }
     .btn {
       display: none;
-      position: absolute;
-      top: 35%;
-      left: 23%;
       width: 200px;
       height: 60px;
-      z-index: 9999;
+      z-index: 99999;
     }
   }
 
@@ -101,6 +103,14 @@
       margin-left: 20px;
     }
 
+    &__card {
+      &:hover {
+        .service__img-block {
+          height: calc(100% + 40px);
+        }
+      }
+    }
+
     &__icon {
       width: 32px;
       height: 32px;
@@ -110,15 +120,10 @@
       padding: 18px 24px;
       padding-right: 17px;
       height: 80px;
-      &:hover {
-        .service__img-block {
-          height: calc(100% + 40px);
-        }
-      }
     }
 
-    &__img-block .btn {
-      left: 11%;
+    &__img-block {
+      height: 178px;
     }
   }
 
@@ -132,13 +137,32 @@
     &__cards {
       grid-template-columns: 1fr;
     }
-    &__img-block .btn {
-      left: 30%;
+
+    &__img-block {
+      height: calc(178px + (150 + 150 * 0.7) * ((100vw - 360px) / 580));
+    }
+
+    &__card {
+      &:hover {
+        .service__img-block {
+          height: calc(210px + (180 + 180 * 0.7) * ((100vw - 360px) / 580));
+        }
+      }
     }
   }
-  @media(max-width: 579px) {
-      &__img-block .btn {
-          left:  calc(14% + (30 + 30 * 0.7) * ((100vw - 320px) / 579));
+  @media (max-width: 579px) {
+  }
+
+  @media (max-width: 320px) {
+    &__img-block {
+      height: 200px;
+    }
+    &__card {
+      &:hover {
+        .service__img-block {
+          height: 225px;
+        }
       }
+    }
   }
 }

@@ -18,7 +18,6 @@
   }
 
   &__logo {
-    
   }
 
   &__shop {
@@ -74,7 +73,6 @@
     }
     .menu__item-link {
       font-weight: 400;
-      
     }
   }
 
@@ -137,6 +135,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    color: #2a3540;
   }
 
   &__development {
@@ -167,5 +166,50 @@
   .btn {
     width: 250px;
     height: 50px;
+  }
+
+  @media (max-width: 1019px) {
+    &__top {
+      grid-template-columns: 1fr 1fr;
+      gap: 70px 130px;
+    }
+
+    &__bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px 205px;
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 581px) {
+    &__top,
+    &__bottom {
+      gap: 70px 10%;
+    }
+    &__bottom {
+      grid-template-columns: 1fr max-content;
+    }
+  }
+
+  @media (max-width: 580px) {
+    &__top {
+      grid-template-columns: 1fr;
+      gap: 68px;
+    }
+    &__bottom {
+      grid-template-columns: 1fr max-content;
+      gap: 0;
+    }
+
+    &__copyright {
+    }
+  }
+
+  @media (max-width: 430px) {
+    &__development {
+      p {
+        display: none;
+      }
+    }
   }
 }

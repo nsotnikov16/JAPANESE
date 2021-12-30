@@ -54,6 +54,18 @@
         border: 0;
         resize: none;
     }
+
+    @media (max-width: 580px) {
+        .form-title {
+            font-size: 22px;
+            line-height: 27px;
+        }
+
+        .form-subtitle {
+            font-size: 17px;
+            line-height: 21px;
+        }
+    }
 }
 
 .form:not(.banner__form) {
@@ -79,5 +91,5 @@
 #callback .form {
     max-width: 445px;
     border-radius: 3px;
-    border: 2px solid #E4EBF1;
+    border: 2px solid #e4ebf1;
 }
