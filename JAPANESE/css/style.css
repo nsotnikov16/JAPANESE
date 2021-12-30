@@ -599,7 +599,7 @@ body {
 }
 
 .arrow.scroll-to {
-  z-index: 9999999999999;
+  z-index: 99999999;
 }
 
 .arrow:hover {
@@ -645,7 +645,7 @@ body {
   -webkit-transform: translateX(200%);
       -ms-transform: translateX(200%);
           transform: translateX(200%);
-  height: 0;
+  height: 100vh;
   padding: 0;
   -webkit-transition: all 0.4s linear;
   -o-transition: all 0.4s linear;
@@ -655,7 +655,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 999;
+  z-index: 10000000000000002000000;
 }
 
 .header.header_mobile.open-menu {
