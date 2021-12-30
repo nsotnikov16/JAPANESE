@@ -92,4 +92,25 @@
     max-width: 445px;
     border-radius: 3px;
     border: 2px solid #e4ebf1;
+
+    @media (max-width: 480px) {
+        max-width: 320px;
+        padding: 55px 25px 40px;
+
+        .form-subtitle {
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .form-title {
+            font-size: 24px;
+            line-height: 30px;
+            /* text-align: center; */
+        }
+    }
+
+    @media(max-width: 320px) {
+        max-width: 290px;
+        padding: 40px 15px;
+    }
 }

@@ -2,43 +2,17 @@
 const header = document.querySelector('.header')
 const burger = header.querySelector('.menu__burger')
 const headerMobile = header.querySelector('.header_mobile')
-
 const headerMobileContainer = headerMobile.querySelector('.page__container')
-
 burger.addEventListener('click', () => headerMobile.classList.add('open-menu'))
-
 const headerTop = header.querySelector('.header__top')
 const headerTopMobile = headerTop.cloneNode(true);
 headerMobileContainer.append(headerTopMobile)
 const burgerMobile = headerMobile.querySelector('.menu__burger')
-const headerContacts = header.querySelector('.header__contacts')
-const headerSocial = header.querySelector('.header__contacts-social')
-const headerBtn = header.querySelector('.header__btn')
-const headerMenuList = header.querySelector('.header__menu .menu__list')
 const headerMenuBlock = header.querySelector('.header__menu .menu__block')
 headerMenuBlock.querySelector('.header__contacts.mobile').remove()
 headerMenuBlock.querySelector('.header__btn.mobile').remove()
 headerMobileContainer.querySelector('.header__contacts').remove()
 burgerMobile.addEventListener('click', () => headerMobile.classList.remove('open-menu'))
-/*const transferElements = [headerBtn, headerSocial]
-
-
-
-function headerMobile() {
-    transferElements.forEach(el => headerMenuBlock.append(el))
-}
-
-function headerNoMobile() {
-    headerTop.append(headerBtn)
-    headerContacts.append(headerSocial)
-}
-
-if (window.innerWidth < 768) headerMobile()
-
-window.addEventListener('resize', () => {
-    window.innerWidth < 768 ? headerMobile() : headerNoMobile()
-}) */
-
 
 // Swiper Banner 
 var swiperBanners = new Swiper(".swiper-banner", {
@@ -63,6 +37,26 @@ var swiperBanners = new Swiper(".swiper-banner", {
     },
     on: {
         slideChange: function () {
+            const slides = Array.from(document.querySelectorAll('.swiper-banner .swiper-slide'))
+            setTimeout(() => {
+                const slideActive = slides.find(item => item.classList.contains('swiper-slide-active'))
+                let title = document.querySelector('.banner__form-title')
+                let customClass = slideActive.classList[1]
+                switch (customClass) {
+                    case "slide1":
+                        title.textContent = 'Оставьте свой номер телефона для связи:'
+                        break;
+                    case 'slide2':
+                        title.textContent = 'Запишитесь на диагностику прямо сейчас:'
+                        break;
+                    case 'slide3':
+                        title.textContent = 'Запишитесь прямо сейчас, это бесплатно!'
+                        break;
+                    case 'slide4':
+                        title.textContent = "Запишитесь прямо сейчас, это бесплатно!"
+                        break;
+                }
+            }, 20)
         },
         init: function () {
         }

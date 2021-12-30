@@ -2462,6 +2462,22 @@ body {
   .banner__block {
     margin-top: 65%;
   }
+
+  #callback .form {
+    max-width: 320px;
+    padding: 55px 25px 40px;
+  }
+
+  #callback .form .form-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  #callback .form .form-title {
+    font-size: 24px;
+    line-height: 30px;
+    /* text-align: center; */
+  }
 }
 
 @media (max-width: 430px) {
@@ -2498,6 +2514,11 @@ body {
 
   .banner__description {
     font-size: 15px;
+  }
+
+  #callback .form {
+    max-width: 290px;
+    padding: 40px 15px;
   }
 
   .order__card {
